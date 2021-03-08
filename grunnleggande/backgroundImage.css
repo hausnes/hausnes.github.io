@@ -1,6 +1,8 @@
 #boks {
     width: 500px;
     height: 500px;
+    padding: 10px;
+    color: white;
     background-color: aliceblue;
     background-image: url("../bileter/joberget.jpg");
 }
