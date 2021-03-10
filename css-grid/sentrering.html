@@ -30,7 +30,11 @@
             display: grid;
             place-items: center;
         }
-        
+        #sosial { /* Det sosiale ikonet er posisjonert heilt nede i høgre hjørne, uansett. Merk at pos. absolute gjer at denne delen kan overlappe alle andre element. Det er ikkje ein del av "flyten". */
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -40,5 +44,8 @@
             <img src="telemark-kvit-2x.png" width="150px">
         </figure>
     </div>
+    <figure id="sosial">
+        <img src="fb-ikon.webp" width="100px">
+    </figure>
 </body>
 </html>
