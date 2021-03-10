@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentrering av innhald</title>
+    <style>
+        /*
+            Utgangspunkt for testinga er desse lenkene:
+            - http://1linelayouts.glitch.me/
+            - https://css-tricks.com/fun-viewport-units/ (eg tek i bruk vh på body sin høgde, men noter deg alt dette kan brukast til.)
+        */
+        body {
+            height: 100vh; /* Utan denne linja så blir boksen vår plassert heilt oppe, altså ikkje sentrert vertikalt. */
+            margin: 0;
+            padding: 0;
+            /* Dei to neste linjene handterer sentreringen */
+            display: grid;
+            place-items: center;
+        }
+        .boks {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 10px;
+            color: white;
+            background-color: black;
+            /* Dei to neste linjene handterer nok ein gong sentreringen, denne gongen på innhaldet inne i boksen igjen. */
+            display: grid;
+            place-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="boks">
+        <h1>Jo Bjørnar</h1>
+    </div>
+</body>
+</html>
