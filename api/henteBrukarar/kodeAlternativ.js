@@ -1,3 +1,5 @@
+// NB: Fungerer ikkje per no!
+
 var request = new XMLHttpRequest();
 request.open('GET', 'https://randomuser.me/api/?results=30', true);
 
