@@ -1,3 +1,5 @@
+/* Basert på eksempel frå https://css-tricks.com/full-page-background-video-styles/ */
+
 video {
     object-fit: cover;
     width: 100vw;
