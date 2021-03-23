@@ -24,6 +24,7 @@ request.onload = function () { // Køyrer først når data er mottatt frå netts
 	if (request.status >= 200 && request.status < 400) {
 		data.results.forEach((brukar) => {
             console.log(brukar.name.title + " " + brukar.name.last);
+			console.log(brukar.picture.medium);
   	})
   	} else {
 		console.log("Data blei ikkje lasta inn frå ekstern kjelde.");
