@@ -1,0 +1,42 @@
+html, body, figure {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+
+    
+    /* flex-basis: 1; */
+}
+
+/*  https://www.w3schools.com/css/css_navbar_horizontal.asp
+*/
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-basis: 1;
+}
+    
+nav a {
+    flex-basis: 1;
+    display: block;
+    color: white;
+    text-decoration: none;
+    flex-grow: 1;
+    
+    /* NB: Ikkje optimal løysing... */
+    background-color: red;
+    padding-top: 30px;
+    text-align: center;
+}
+  
+nav a:hover {
+    background-color: #111;
+}
+
+nav figure {
+    flex-grow: 1;
+    background-color: white;
+}
