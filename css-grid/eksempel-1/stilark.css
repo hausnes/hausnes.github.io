@@ -1,0 +1,22 @@
+html, body {
+    /* Grunnleggande innstillingar */
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    /* Grid-oppsett */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1em;
+}
+
+#wrapper div {
+    background-color: black;
+    color: white;
+    padding: 2em;
+    border: 2px solid red;
+}

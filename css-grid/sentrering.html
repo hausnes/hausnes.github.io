@@ -2,7 +2,6 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sentrering av innhald</title>
     <style>
@@ -12,7 +11,7 @@
             - https://css-tricks.com/fun-viewport-units/ (eg tek i bruk vh på body sin høgde, men noter deg alt dette kan brukast til.)
         */
         body {
-            height: 100vh; /* Utan denne linja så blir boksen vår plassert heilt oppe, altså ikkje sentrert vertikalt. */
+            height: 100vh; /* Utan denne linja så blir boksen vår plassert heilt oppe, altså ikkje sentrert vertikalt. Ev. bruk 100% på både body og HTML. */
             margin: 0;
             padding: 0;
             /* Dei to neste linjene handterer sentreringen */
@@ -42,12 +41,12 @@
     <div class="boks">
         <h1>Jo Bjørnar</h1>
         <figure>
-            <img src="telemark-kvit-2x.png" width="150px">
+            <img src="bilder/telemark-kvit-2x.png" width="150px">
         </figure>
     </div>
     <!-- Sosialt ikon som me ynskjer å plassere "ut av" flyten i dokumentet. -->
     <figure id="sosial">
-        <img src="fb-ikon.webp" width="100px">
+        <img src="bilder/fb-ikon.webp" width="100px">
     </figure>
 </body>
 </html>
