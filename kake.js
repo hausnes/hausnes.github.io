@@ -8,7 +8,7 @@ const lyd = new Audio("lyd/munch.mp3"); // Oppretter en lydfil som vi kan spille
 //     document.getElementById("kake").removeEventListener("click", klikk);
 // }
 
-document.getElementById("infoskjerm").innerText = "Her teller vi ned fra 5 sekunder når du trykker på start!";
+document.getElementById("infoskjerm").innerText = "Her teller vi ned fra 5 sekunder når du trykker på start!\nTrykk deretter så mange ganger du klarer på kaken.";
 
 let tidIgjen = 5;
 
@@ -78,6 +78,7 @@ function restart() {
     document.getElementById("poeng").innerText = poengsum;
     document.getElementById("kake").addEventListener("click", klikk);
     document.getElementById("kake").src = "bileter/kake.png";
+    document.getElementById("infoskjerm").innerText = "Tiden har begynt!";
     
     tidIgjen = 5;
     tidsTimer = setInterval(tidtaking, 1000);
