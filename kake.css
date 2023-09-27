@@ -1,0 +1,31 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+} */
+
+#infoskjerm {
+    color: red;
+}
+
+button {
+    background-color: #60d2ff; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
