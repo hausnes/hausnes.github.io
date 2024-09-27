@@ -84,3 +84,5 @@ function restart() {
     tidsTimer = setInterval(tidtaking, 1000);
     // const timeout = setTimeout(stopp, 5000);
 }
+
+// Kommentar i js
