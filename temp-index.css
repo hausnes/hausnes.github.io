@@ -1,0 +1,35 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    /* height: 100%; */
+}
+#left {
+    grid-area: left;
+    background-color: yellow;
+}
+#right {
+    grid-area: right;
+    background-color: lightblue;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "left right";
+    /* grid-gap: 20px; */
+    /* padding: 20px; */
+}
+
+#right img {
+    width: 100%;
+    height: auto;
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
