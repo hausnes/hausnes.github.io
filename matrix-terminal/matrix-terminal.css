@@ -1,0 +1,55 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000;
+    color: #00ff00;
+    overflow: hidden;
+
+    /* For å midstille terminalen i vinduet */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#terminal {
+    width: 600px;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+#tekstboks {
+    width: 90%;
+    height: 300px;
+    background-color: #000;
+    color: #00ff00;
+    font-size: 1rem;
+    /* font-family: 'Courier New', Courier, monospace; */
+    /* border: none; */
+    border: 1px solid #00ff00;
+    outline: none;
+    padding: 10px;
+    overflow-y: auto;
+    resize: none; /* Prevent resizing */
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #00ff00;
+    background-color: #000;
+    color: #00ff00;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    outline: none;
+}
