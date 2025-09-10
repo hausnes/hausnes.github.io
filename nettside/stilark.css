@@ -1,0 +1,25 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    
+    /* background-image: url('bileter/noun-nature-1844356.svg'); */
+    /* nature by Diane from <a href="https://thenounproject.com/browse/icons/term/nature/" target="_blank" title="nature Icons">Noun Project</a> (CC BY 3.0) */
+    /* background-size: cover;
+    background-attachment: fixed; */
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-items: center;
+}
+
+main {
+    background-color: rgb(0, 0, 0, 0.9);
+    padding: 2rem;
+    color: white;
+}
