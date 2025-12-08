@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julestemning: Grottejakt</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <h1>🎅 Grottejakt</h1>
+        <div class="hud">
+            <span id="hp">HP: 10</span>
+            <span id="gifts">Gaver: 0/5</span>
+            <span id="lantern">Lanterne: 2</span>
+            <span id="timer">Tid: 90s</span>
+            <label class="difficulty">Vanskelighet:
+                <select id="difficulty">
+                    <option value="easy">Lett</option>
+                    <option value="normal" selected>Normal</option>
+                    <option value="hard">Vanskelig</option>
+                </select>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <div id="grid" class="grid" aria-label="Grotte-rutenett" role="grid"></div>
+        <div class="controls">
+            <p>Piltaster for å bevege deg. Samle 5 gaver og finn utgangen!</p>
+        </div>
+    </main>
+
+    <div id="combat" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="combat-title">
+        <div class="panel">
+            <h2 id="combat-title">Kamp!</h2>
+            <div class="bars">
+                <div><strong>Deg</strong>: <span id="player-hp">10</span> HP</div>
+                <div><strong>Fiende</strong>: <span id="enemy-hp">6</span> HP</div>
+            </div>
+            <div class="actions">
+                <button id="act-attack">Angrip</button>
+                <button id="act-guard">Forsvar</button>
+                <button id="act-run">Løp vekk</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay-lose" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="lose-title">
+        <div class="panel">
+            <h2 id="lose-title">Spillet er over</h2>
+            <p id="lose-reason">Du mistet all HP.</p>
+            <div class="actions">
+                <button id="btn-restart">Start på nytt</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay-win" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="win-title">
+        <div class="panel">
+            <h2 id="win-title">Seier! 🎄</h2>
+            <p>Du fant utgangen med alle gavene.</p>
+            <div class="actions">
+                <button id="btn-restart2">Spill igjen</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="message" class="toast hidden" role="status" aria-live="polite"></div>
+</body>
+</html>
