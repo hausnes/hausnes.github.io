@@ -16,8 +16,16 @@ body {
     align-items: center;
 }
 
+#matrix {
+    position: fixed;
+    inset: 0; /* Dekk heile vindauget */
+    z-index: 0;
+}
+
 #terminal {
-    width: 600px;
+    position: relative;
+    z-index: 1; /* Legg terminalen oppå matrix-regnet */
+    width: min(600px, 100%); /* Krympar på smale skjermar (mobil) */
     height: 600px;
 
     display: flex;
