@@ -1,40 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jo Bjørnar Hausnes – prosjekt</title>
+    <meta name="description" content="Programmeringsprosjekt av Jo Bjørnar Hausnes: spel, webapplikasjonar, KI, Python og Raspberry Pi.">
+    <meta property="og:title" content="Jo Bjørnar Hausnes – prosjekt">
+    <meta property="og:description" content="Spel, webapplikasjonar, KI, Python og Raspberry Pi.">
+    <meta property="og:image" content="https://hausnes.github.io/bileter/web/oksen-1200.jpg">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛰️</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <script src="prosjekt.js" defer></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
+    <a class="hopp" href="#prosjekt">Hopp til prosjekta</a>
+
+    <header class="toppfelt">
+        <a class="logo" href="#">JBH<span>.</span></a>
+        <nav aria-label="Hovudmeny">
+            <a href="#framheva">I søkelyset</a>
+            <a href="#prosjekt">Prosjekt</a>
+            <a href="#om-meg">Om meg</a>
+            <a href="https://github.com/hausnes" class="nav-github">GitHub ↗</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img class="hero-bilete"
+             src="bileter/web/oksen-2400.jpg"
+             srcset="bileter/web/oksen-1200.jpg 1200w, bileter/web/oksen-2400.jpg 2400w"
+             sizes="100vw"
+             alt="Jo Bjørnar på telemarkski i ein bratt snøbakke, med fjordar og fjell i bakgrunnen.">
+        <div class="hero-tekst">
+            <p class="hero-hei">Hei, eg heiter</p>
+            <h1>Jo Bjørnar<br>Hausnes</h1>
+            <p class="hero-ingress">
+                Lærar ved Amalie Skram vgs. Eg lagar spel, verktøy og nettsider,
+                elles finn du meg på ein fjelltopp.
+            </p>
+            <div class="hero-knappar">
+                <a class="knapp knapp-primar" href="#prosjekt">Sjå prosjekta</a>
+                <a class="knapp knapp-glas" href="#om-meg">Om meg</a>
+            </div>
+        </div>
+        <p class="fotokreditt">Foto: Audun Nygaard</p>
+    </section>
+
     <main>
-        <div id="left">
-            <span>
-                <p>Hei, eg heiter</p>
-            </span>
-            <h1>Jo Bjørnar Hausnes</h1>
-            <p>
-                og eg likar fjell, chips og programmering.
-            </p>
-            <p>
-                <a href="https://github.com/hausnes">Besøk GitHub-profilen min</a>
-            </p>
-            <p>
-                <a href="kakeklikker/index.html">Spel kakeklikker</a>
-            </p>
-            <p>
-                <a href="matrix-terminal/matrix-terminal.html">Prøv Matrix-terminalen</a>
-            </p>
-        </div>
-        <div id="right">
-            <img src="bileter/oksen-audun_nygaard.jpg" alt="">
-            <img src="bileter/joberget.jpg" alt="">
-            <img src="bileter/kjerringafjellet.jpg" alt="">
-            <img src="bileter/smorsund.jpg" alt="">
-            <img src="bileter/hausnes-nordlys.jpg" alt="">
-            <img src="bileter/gronlivatnet.jpg" alt="">
-            <img src="bileter/midtfjell.jpg" alt="">
-        </div>
+        <section id="framheva" class="seksjon framheva" aria-labelledby="framheva-tittel">
+            <div class="innhald">
+                <p class="overtittel">I søkelyset</p>
+                <div id="framheva-kort" class="framheva-kort"></div>
+            </div>
+        </section>
+
+        <section id="prosjekt" class="seksjon prosjekt" aria-labelledby="prosjekt-tittel">
+            <div class="innhald">
+                <div class="seksjon-hovud">
+                    <p class="overtittel">Arkivet</p>
+                    <h2 id="prosjekt-tittel">Prosjekt</h2>
+                </div>
+
+                <div class="filter" role="group" aria-label="Filtrer prosjekt etter teknologi">
+                    <div id="filterknappar" class="filterknappar"></div>
+                    <p id="tal-treff" class="tal-treff" aria-live="polite"></p>
+                </div>
+
+                <ul id="prosjektliste" class="prosjektliste"></ul>
+            </div>
+        </section>
+
+        <section id="om-meg" class="seksjon om-meg" aria-labelledby="om-meg-tittel">
+            <div class="innhald om-meg-rutenett">
+                <div class="om-meg-tekst">
+                    <p class="overtittel">Om meg</p>
+                    <h2 id="om-meg-tittel">Fjell, chips og programmering</h2>
+                    <p>
+                        Eg er lærar ved Amalie Skram vgs, der eg underviser i programmering
+                        og IT. Mange av prosjekta mine startar som noko eg treng i klasserommet:
+                        eit køsystem, temperaturdata elevane kan analysere, eller oppgåver
+                        som gjer webutvikling litt meir moro.
+                    </p>
+                    <p>
+                        Andre prosjekt lagar eg berre fordi det er kjekt, som eit kortspel,
+                        ein digital peis eller eit julenissefilter med ansiktssporing.
+                        Når eg ikkje sit bak tastaturet, er eg truleg på veg opp ei fjellside
+                        med ski på sekken.
+                    </p>
+                </div>
+
+                <div class="ferdigheiter">
+                    <h3>Språk og teknologiar</h3>
+                    <dl>
+                        <div>
+                            <dt>Web</dt>
+                            <dd><span>JavaScript</span><span>HTML</span><span>CSS</span><span>TypeScript</span></dd>
+                        </div>
+                        <div>
+                            <dt>Server og data</dt>
+                            <dd><span>Node.js</span><span>Express</span><span>SQL</span><span>SQLite</span><span>Docker</span></dd>
+                        </div>
+                        <div>
+                            <dt>Python</dt>
+                            <dd><span>Python</span><span>Jupyter</span><span>Datanalyse</span><span>PyGame</span></dd>
+                        </div>
+                        <div>
+                            <dt>KI</dt>
+                            <dd><span>MediaPipe</span><span>Bildeanalyse</span><span>KI-assistert koding</span></dd>
+                        </div>
+                        <div>
+                            <dt>Maskinvare</dt>
+                            <dd><span>Raspberry Pi</span><span>Pico</span><span>Arduino</span><span>ESP32</span></dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="fjellstripe" aria-hidden="true">
+                <img src="bileter/web/joberget-900.jpg" alt="" loading="lazy">
+                <img src="bileter/web/kjerringafjellet-900.jpg" alt="" loading="lazy">
+                <img src="bileter/web/hausnes-nordlys-900.jpg" alt="" loading="lazy">
+                <img src="bileter/web/gronlivatnet-900.jpg" alt="" loading="lazy">
+            </div>
+        </section>
     </main>
+
+    <footer class="botn">
+        <div class="innhald botn-innhald">
+            <p>© <span id="aar"></span> Jo Bjørnar Hausnes</p>
+            <p><a href="https://github.com/hausnes">github.com/hausnes</a></p>
+        </div>
+    </footer>
 </body>
 </html>
