@@ -8,10 +8,10 @@ visFilterknappar();
 visProsjekt();
 
 
-// ---------- Prosjektet i søkelyset ----------
+// ---------- Prosjektet som er framheva ----------
 
 function visFramheva() {
-    const p = prosjekt.find((p) => p.id === framheva) ?? prosjekt[0];
+    const p = prosjekt.find((p) => p.id === framheva) ?? prosjekt[0]; // Vel prosjektet som er framheva, eller ta det første
     const boks = document.getElementById("framheva-kort");
 
     boks.innerHTML = `
