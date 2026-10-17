@@ -12,7 +12,7 @@ const PORTFOLIO = {
   framheva: "a-puzzle-a-day",
 
   taggRekkjefolgje: [
-    "JavaScript", "HTML", "CSS", "Python", "Node.js", "KI",
+    "JavaScript", "TypeScript", "HTML", "CSS", "Python", "Node.js", "KI",
     "Raspberry Pi", "Docker", "Spel", "Data", "Undervisning",
   ],
 
@@ -27,6 +27,15 @@ const PORTFOLIO = {
       bilete: "bileter/prosjekt/a-puzzle-a-day.png",
       demo: "https://hausnes.github.io/a-puzzle-a-day/",
       kjelde: "https://github.com/hausnes/a-puzzle-a-day",
+    },
+    {
+      id: "er-det-trygt",
+      tittel: "Er det trygt?",
+      kort: "Finn ei trygg rute ned frå fjellet, basert på hellinga i terrenget.",
+      lang: "Vel start og mål på kartet, så finn appen ruta som unngår stup, bratt terreng og vatn. Brukar høgdedata frå Kartverket, og kan fylgje deg med GPS undervegs. Backend i Python (FastAPI) og frontend i TypeScript med MapLibre, samla i éin Docker-container.",
+      taggar: ["Python", "TypeScript", "Docker", "Data"],
+      ikon: "⛰️",
+      kjelde: "https://github.com/hausnes/er-det-trygt",
     },
     {
       id: "webkamera-filter",
