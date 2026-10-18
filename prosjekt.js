@@ -35,6 +35,7 @@ const PORTFOLIO = {
       lang: "Vel start og mål på kartet, så finn appen ruta som unngår stup, bratt terreng og vatn. Brukar høgdedata frå Kartverket, og kan fylgje deg med GPS undervegs. Backend i Python (FastAPI) og frontend i TypeScript med MapLibre, samla i éin Docker-container.",
       taggar: ["Python", "TypeScript", "Docker", "Data"],
       ikon: "⛰️",
+      demo: "https://trygt.hausnes.synology.me/",
       kjelde: "https://github.com/hausnes/er-det-trygt",
     },
     {
