@@ -7,6 +7,7 @@ Ei oversikt over nokre av prosjekta eg har jobba med opp gjennom åra.
 Utvalte prosjekt som ligg i eigne repositories:
 - https://github.com/hausnes/a-puzzle-a-day
 - https://github.com/hausnes/er-det-trygt
+- https://github.com/hausnes/musikkspelar-terminal
 - https://github.com/hausnes/nordnes-sjobad
 - https://github.com/hausnes/flip-7
 - https://github.com/hausnes/kulturuke

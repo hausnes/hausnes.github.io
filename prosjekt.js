@@ -5,7 +5,7 @@
   - Filterknappane blir laga automatisk frå `taggar`. Rekkjefølgja styrer du i `taggRekkjefolgje`.
   - `bilete` er valfritt. Utan bilete får kortet eit generert omslag med `ikon`.
     Skjermdumpar kan du lage med `verktoy/skjermdump.sh`.
-  - `demo` og `kjelde` er valfrie lenker.
+  - `demo` og `kjelde` er valfrie lenker. `demoTekst` byter ut «Prøv sjølv» på demo-knappen.
 */
 
 const PORTFOLIO = {
@@ -37,6 +37,18 @@ const PORTFOLIO = {
       ikon: "⛰️",
       demo: "https://trygt.hausnes.synology.me/",
       kjelde: "https://github.com/hausnes/er-det-trygt",
+    },
+    {
+      id: "musikkspelar-terminal",
+      tittel: "Musikkspelar",
+      kort: "Ein musikkspelar i terminalen, med spektrumanalysator i Winamp-stil.",
+      lang: "Bibliotek, kø, gapless avspeling og albumcover teikna med halvblokk-teikn, rett i terminalvindauget. Spektrumanalysatoren reknar ut frekvensane med FFT i takt med musikken. Laga i Python med Textual, og kan installerast frå PyPI med «uv tool install musikkspelar».",
+      taggar: ["Python"],
+      ikon: "🎵",
+      bilete: "bileter/prosjekt/musikkspelar-terminal.png",
+      demo: "https://pypi.org/project/musikkspelar/",
+      demoTekst: "Installer frå PyPI",
+      kjelde: "https://github.com/hausnes/musikkspelar-terminal",
     },
     {
       id: "webkamera-filter",

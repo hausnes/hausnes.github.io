@@ -150,7 +150,7 @@ function koplaBileteFallback(boks) {
 function lenkjerHtml(p, stor) {
     const klasse = stor ? "knapp" : "lenkje";
     let html = "";
-    if (p.demo) html += `<a class="${klasse} ${stor ? "knapp-primar" : ""}" href="${p.demo}">Prøv sjølv →</a>`;
+    if (p.demo) html += `<a class="${klasse} ${stor ? "knapp-primar" : ""}" href="${p.demo}">${p.demoTekst ?? "Prøv sjølv"} →</a>`;
     if (p.kjelde) html += `<a class="${klasse} ${stor ? "knapp-omriss" : "lenkje-dempa"}" href="${p.kjelde}">Kjeldekode</a>`;
     return html;
 }
