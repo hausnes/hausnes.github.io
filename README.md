@@ -18,10 +18,12 @@ Utvalte prosjekt som ligg i eigne repositories:
 - https://github.com/hausnes/bildehost
 - https://github.com/hausnes/vent-paa-tur
 - https://github.com/hausnes/raspberry-mm
+- https://github.com/hausnes/matrix-terminal
+- https://github.com/hausnes/kakeklikkar
 
-Utvalte prosjekt i denne mappa: 
-- matrix-terminal
-- kakeklikker
+## Bloggen
+
+Bloggen ligg i `blogg/`. Sjå [verktoy/README.md](verktoy/README.md) for korleis du skriv nye innlegg.
 
 ## Slik oppdaterer du portfolioen
 

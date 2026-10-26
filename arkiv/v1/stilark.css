@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: url(oksen-audun_nygaard.jpg) center center fixed no-repeat;
+	background-size: cover;
+	/*background-repeat:no-repeat;*/
+}
+
+/*.tekstboks {
+	width: 300px;
+	height: 200px;
+	background-color:#FFF;
+	padding: 10px;
+	color:#369;
+	margin-left: 100px;
+}*/
+
+.plassering {
+	width: 400px;
+	margin-left: 10px;
+}
+
+/*http://www.css3.info/preview/background-size/*/
+
+/* vendor prefixes removed for clarity */
+.ribbon {
+    width: 350px;
+    margin: 10px auto;
+    padding: 0 10px 0;
+    position: relative;
+    color: #444;
+    background: #fff;
+    border: 1px solid #d2d2d2;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.ribbon h3 {
+    display: block;
+    height: 30px;
+    line-height: 1.3;
+    width: 360px;
+    margin: 0;
+    padding: 5px 10px;
+    position: relative;
+    left: -16px;
+    top: 8px;
+    color: #cfcfcf;
+    text-shadow: 0 1px 1px #111;
+    border-top: 1px solid #363636;
+    border-bottom: 1px solid #202020;
+    background: #333;
+    background: linear-gradient(top, #383838 0%, #262626 100%);
+    border-radius: 2px 2px 0 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+.ribbon h3::before,
+.ribbon h3::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -11px;
+    z-index: -10;
+    border: 5px solid;
+    border-color: #242424 transparent transparent transparent;    
+}
+.ribbon h3::before {left: 0;}
+.ribbon h3::after {right: 0;}

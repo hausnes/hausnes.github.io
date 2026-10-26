@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jo Bjørnar Hausnes – prosjekt</title>
-    <meta name="description" content="Programmeringsprosjekt av Jo Bjørnar Hausnes: spel, webapplikasjonar, KI, Python og Raspberry Pi.">
-    <meta property="og:title" content="Jo Bjørnar Hausnes – prosjekt">
-    <meta property="og:description" content="Spel, webapplikasjonar, KI, Python og Raspberry Pi.">
+    <title>Jo Bjørnar Hausnes</title>
+    <meta name="description" content="Dei offisielle nettsidene til Jo Bjørnar Hausnes: Programmeringsprosjekt, foto og film med meir.">
+    <meta property="og:title" content="Jo Bjørnar Hausnes">
+    <meta property="og:description" content="Foto og film. Spel, webapplikasjonar, KI, Python og Raspberry Pi.">
     <meta property="og:image" content="https://hausnes.github.io/bileter/web/oksen-1200.jpg">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛰️</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="felles.css">
     <link rel="stylesheet" href="index.css">
+    <script src="felles.js" defer></script>
     <script src="prosjekt.js" defer></script>
     <script src="index.js" defer></script>
 </head>
@@ -21,9 +23,13 @@
 
     <header class="toppfelt">
         <a class="logo" href="#">JBH<span>.</span></a>
-        <nav aria-label="Hovudmeny">
+        <button class="menyknapp" type="button" aria-expanded="false" aria-controls="hovudmeny" aria-label="Opne meny" hidden>
+            <span class="menyknapp-strekar" aria-hidden="true"></span>
+        </button>
+        <nav id="hovudmeny" aria-label="Hovudmeny">
             <a href="#framheva">I søkelyset</a>
             <a href="#prosjekt">Prosjekt</a>
+            <a href="blogg/">Blogg</a>
             <a href="#om-meg">Om meg</a>
             <a href="https://github.com/hausnes" class="nav-github">GitHub ↗</a>
         </nav>
@@ -40,7 +46,7 @@
             <h1>Jo Bjørnar<br>Hausnes</h1>
             <p class="hero-ingress">
                 Lærar ved Amalie Skram vgs. Eg lagar spel, verktøy og nettstader.
-                Elles finn du meg på ein fjelltopp.
+                Elles finn du meg på ein fjelltopp, gjerne dokumentert med foto og film.
             </p>
             <div class="hero-knappar">
                 <a class="knapp knapp-primar" href="#prosjekt">Sjå prosjekta</a>
@@ -80,21 +86,36 @@
                     <p class="overtittel">Om meg</p>
                     <h2 id="om-meg-tittel">Fjell, chips og programmering</h2>
                     <p>
-                        Eg er lærar ved Amalie Skram vgs, der eg underviser i programmering
+                        Eg er lærar ved Amalie Skram VGS, der eg underviser i m.a. programmering
                         og IT. Mange av prosjekta mine startar som noko eg treng i klasserommet:
                         eit køsystem, temperaturdata elevane kan analysere, eller oppgåver
                         som gjer webutvikling litt meir moro.
                     </p>
                     <p>
-                        Andre prosjekt lagar eg berre fordi det er kjekt, som eit kortspel,
-                        ein digital peis eller eit julenissefilter med ansiktssporing.
                         Når eg ikkje sit bak tastaturet, er eg truleg på veg opp ei fjellside
-                        med ski på sekken.
+                        med ski på sekken. Eg har gjerne med meg eit kamera, ei drone eller ein annan 
+                        måte å dokumentere på. Dette kan du sjå litt av i fotosamlinga under, eller på 
+                        YouTube-kanalen min.
                     </p>
+                    <p>
+                        Eg har i tillegg ein del (primært eldre) turtips til nokre av mine favorittfjell
+                        og stader. Få inspirasjon til din neste tur i bloggen.
+                    </p>
+                    <div class="om-meg-lenkjer">
+                        <a class="knapp knapp-omriss" href="https://www.youtube.com/channel/UC1q2lz8bgTEe8jV9CIkBgew">
+                            <span aria-hidden="true">🎬</span> YouTube
+                        </a>
+                        <a class="knapp knapp-omriss" href="https://goo.gl/photos/qQYYQutRirPbMuCX8">
+                            <span aria-hidden="true">📷</span> Foto
+                        </a>
+                        <a class="knapp knapp-omriss" href="blogg/">
+                            <span aria-hidden="true">✍️</span> Blogg
+                        </a>
+                    </div>
                 </div>
 
                 <div class="ferdigheiter">
-                    <h3>Språk og teknologiar</h3>
+                    <h3>Språk, teknologiar og ferdigheiter</h3>
                     <dl>
                         <div>
                             <dt>Web</dt>
@@ -116,6 +137,10 @@
                             <dt>Maskinvare</dt>
                             <dd><span>Raspberry Pi</span><span>Pico</span><span>Arduino</span><span>ESP32</span></dd>
                         </div>
+                        <div>
+                            <dt>Media</dt>
+                            <dd><span>Foto</span><span>Programvare</span><span>Drone</span><span>Film</span></dd>
+                        </div>
                     </dl>
                 </div>
             </div>
@@ -132,7 +157,12 @@
     <footer class="botn">
         <div class="innhald botn-innhald">
             <p>© <span id="aar"></span> Jo Bjørnar Hausnes</p>
-            <p><a href="https://github.com/hausnes">github.com/hausnes</a></p>
+            <p class="botn-lenkjer">
+                <a href="https://github.com/hausnes">GitHub</a> ·
+                <a href="https://www.youtube.com/channel/UC1q2lz8bgTEe8jV9CIkBgew">YouTube</a> ·
+                <a href="https://goo.gl/photos/qQYYQutRirPbMuCX8">Foto</a> ·
+                <a href="blogg/feed.xml">RSS</a>
+            </p>
         </div>
     </footer>
 </body>

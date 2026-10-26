@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jo Bjørnar Hausnes</title>
+    <link rel="stylesheet" href="stilark.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%237d6ee7%22></rect><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2290%22>⛰️</text></svg>" />
+</head>
+
+<body>
+
+    <!-- Bakgrunnsbilete (to lag for mjuk crossfade) -->
+    <div id="bakgrunn-a" class="bakgrunn aktiv"></div>
+    <div id="bakgrunn-b" class="bakgrunn"></div>
+
+    <!-- Hovudkort -->
+    <main class="kort">
+        <div class="profil-topp">
+            <img src="jo-bjornar-hausnes.jpg" alt="Jo Bjørnar Hausnes" class="profilbilde">
+            <div>
+                <h1>Jo Bjørnar Hausnes</h1>
+                <p class="undertittel">Lærar · Fjellelskar · Teknologientusiast</p>
+            </div>
+        </div>
+
+        <p>
+            Velkomen! Eg er glad i fjell og tur — bakgrunnsbileta representerer stader og augeblikk som betyr noko for meg.
+            Telemarkski og fjell er ein lidenskap. Eg er og svak for teknologi, webutvikling, foto og film.
+        </p>
+        <p>
+            Eg jobbar på <strong>Amalie Skram VGS</strong> som lærar i mellom anna
+            informasjonsteknologi 1 og 2, utvikling, teknologi og forskningslære 1 med meir.
+        </p>
+
+        <nav class="lenkjer">
+            <a href="../../blogg/?kategori=fjell" target="_blank" rel="noopener">
+                <span aria-hidden="true">✍️</span> Blogg
+            </a>
+            <a href="https://goo.gl/photos/qQYYQutRirPbMuCX8" target="_blank" rel="noopener">
+                <span aria-hidden="true">📷</span> Foto
+            </a>
+            <a href="https://www.youtube.com/channel/UC1q2lz8bgTEe8jV9CIkBgew" target="_blank" rel="noopener">
+                <span aria-hidden="true">🎬</span> YouTube
+            </a>
+            <a href="https://hausnes.github.io/" target="_blank" rel="noopener">
+                <span aria-hidden="true">💻</span> Programmering
+            </a>
+        </nav>
+    </main>
+
+    <!-- Bileteinfo nedst til høgre -->
+    <div class="bilete-info" id="bileteInfo" aria-live="polite"></div>
+
+    <script>
+    // =============================================
+    // BAKGRUNNSBILETE — legg til fleire bilete her!
+    // Lag ei mappe kalla "bakgrunnsbilete/" og legg
+    // filene der. Oppdater lista nedanfor.
+    // =============================================
+    const bilete = [
+        { fil: "bakgrunnsbilete/oksen-audun_nygaard.jpg", tekst: "Oksen, Hardanger — foto: Audun Nygård" },
+        { fil: "bakgrunnsbilete/gronlivatnet.jpg", tekst: "Grønlivatnet, Hardang — foto: Jo Bjørnar Hausnes" },
+        { fil: "bakgrunnsbilete/hausnes-nordlys.jpg", tekst: "Hausnes, Granvin — foto: Jo Bjørnar Hausnes" },
+        { fil: "bakgrunnsbilete/joberget.jpg", tekst: "Joberget, Granvin — foto: Jo Bjørnar Hausnes" },
+        { fil: "bakgrunnsbilete/kjerringafjellet.jpg", tekst: "Kjerringafjellet, Granvin — foto: Jo Bjørnar Hausnes" },
+        { fil: "bakgrunnsbilete/midtfjell.jpg", tekst: "Midtfjell, Hardanger — foto: Jo Bjørnar Hausnes" },
+        { fil: "bakgrunnsbilete/smorsund.jpg", tekst: "Smørsund, Hallingskeid — foto: Jo Bjørnar Hausnes" }
+    ];
+
+    const BYTTE_INTERVALL = 10000; // millisekund mellom kvart bytte (8000 = 8 sekund)
+
+    const lagA = document.getElementById('bakgrunn-a');
+    const lagB = document.getElementById('bakgrunn-b');
+    const info = document.getElementById('bileteInfo');
+    let gjeldande = 0;
+    let brukA = true;
+
+    function visBilete(index) {
+        const b = bilete[index];
+        const nyttLag = brukA ? lagA : lagB;
+        const gammaltLag = brukA ? lagB : lagA;
+
+        nyttLag.style.backgroundImage = `url('${b.fil}')`;
+        nyttLag.classList.add('aktiv');
+        gammaltLag.classList.remove('aktiv');
+        brukA = !brukA;
+
+        if (info) info.textContent = b.tekst || '';
+    }
+
+    // Start
+    visBilete(0);
+
+    if (bilete.length > 1) {
+        setInterval(() => {
+            gjeldande = (gjeldande + 1) % bilete.length;
+            visBilete(gjeldande);
+        }, BYTTE_INTERVALL);
+    }
+    </script>
+
+</body>
+</html>

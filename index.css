@@ -1,157 +1,4 @@
-/* ---------- Fargar og grunnoppsett ---------- */
-
-:root {
-    --snø: #f5f7fa;
-    --flate: #ffffff;
-    --blekk: #0b1a30;
-    --dempa: #556275;
-    --strek: #dde3ea;
-    --himmel: #1d6fd6;
-    --oransje: #db3a03;
-    --oransje-mørk: #a82c00;
-    --natt: #0b1a30;
-    --natt-tekst: #e9eef5;
-    --skrå: 7vw;
-    --radius: 14px;
-    --skugge: 0 1px 2px rgb(11 26 48 / 6%), 0 8px 24px rgb(11 26 48 / 8%);
-    --font-tittel: "Bricolage Grotesque", system-ui, sans-serif;
-    --font-tekst: "Inter", system-ui, sans-serif;
-    color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --snø: #0d1626;
-        --flate: #15213a;
-        --blekk: #e9eef5;
-        --dempa: #9aa8bc;
-        --strek: #26344f;
-        --himmel: #5da0ff;
-        --oransje: #ff6a2b;
-        --oransje-mørk: #ff8a55;
-        --natt: #060d19;
-        --skugge: 0 1px 2px rgb(0 0 0 / 30%), 0 8px 24px rgb(0 0 0 / 30%);
-        color-scheme: dark;
-    }
-}
-
-*, *::before, *::after { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-    margin: 0;
-    background: var(--snø);
-    color: var(--blekk);
-    font-family: var(--font-tekst);
-    font-size: 1.0625rem;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-}
-
-img { display: block; max-width: 100%; }
-
-h1, h2, h3 {
-    font-family: var(--font-tittel);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    margin: 0;
-}
-
-a { color: inherit; }
-
-.innhald {
-    width: min(1180px, 100% - 2rem);
-    margin-inline: auto;
-}
-
-.hopp {
-    position: absolute;
-    left: 1rem;
-    top: -3rem;
-    z-index: 100;
-    padding: 0.5rem 1rem;
-    background: var(--oransje);
-    color: white;
-}
-.hopp:focus { top: 1rem; }
-
-:focus-visible {
-    outline: 3px solid var(--oransje);
-    outline-offset: 3px;
-}
-
-.overtittel {
-    margin: 0 0 0.75rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--oransje);
-}
-
-
-/* ---------- Knappar ---------- */
-
-.knapp {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.8rem 1.4rem;
-    border-radius: 999px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform 0.15s, background-color 0.15s;
-}
-.knapp:hover { transform: translateY(-2px); }
-
-.knapp-primar { background: var(--oransje); color: white; }
-.knapp-primar:hover { background: var(--oransje-mørk); }
-
-.knapp-glas {
-    background: rgb(255 255 255 / 16%);
-    color: white;
-    border: 1px solid rgb(255 255 255 / 45%);
-    backdrop-filter: blur(8px);
-}
-
-.knapp-omriss {
-    border: 1.5px solid currentColor;
-    color: inherit;
-}
-
-
-/* ---------- Toppfelt ---------- */
-
-.toppfelt {
-    position: absolute;
-    inset: 0 0 auto;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.25rem clamp(1rem, 4vw, 3rem);
-    color: white;
-}
-
-.logo {
-    font-family: var(--font-tittel);
-    font-weight: 800;
-    font-size: 1.5rem;
-    text-decoration: none;
-}
-.logo span { color: var(--oransje); }
-
-.toppfelt nav { display: flex; gap: clamp(0.75rem, 2.5vw, 2rem); }
-
-.toppfelt nav a {
-    font-size: 0.95rem;
-    font-weight: 500;
-    text-decoration: none;
-    text-shadow: 0 1px 8px rgb(0 0 0 / 30%);
-}
-.toppfelt nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
-
+/* Stil som berre gjeld startsida. Felles stil ligg i felles.css. */
 
 /* ---------- Hero ---------- */
 
@@ -289,7 +136,6 @@ a { color: inherit; }
 .framheva .lenker { gap: 0.75rem; margin-top: 1.75rem; }
 
 
-/* ---------- Filter ---------- */
 
 .prosjekt { margin-top: calc(var(--skrå) * -0.5); }
 
@@ -300,29 +146,6 @@ a { color: inherit; }
     justify-content: space-between;
     gap: 1rem;
     margin-bottom: 2rem;
-}
-
-.filterknappar { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-
-.filterknapp {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    padding: 0.5rem 0.95rem;
-    border: 1.5px solid var(--strek);
-    border-radius: 999px;
-    background: var(--flate);
-    color: var(--blekk);
-    font: 500 0.92rem var(--font-tekst);
-    cursor: pointer;
-    transition: border-color 0.15s, background-color 0.15s, color 0.15s;
-}
-.filterknapp:hover { border-color: var(--blekk); }
-
-.filterknapp[aria-pressed="true"] {
-    background: var(--blekk);
-    border-color: var(--blekk);
-    color: var(--snø);
 }
 
 .filtertal {
@@ -505,6 +328,14 @@ a { color: inherit; }
 .om-meg-tekst h2 { margin-bottom: 1.25rem; }
 .om-meg-tekst p { color: var(--dempa); max-width: 34rem; }
 
+.om-meg-lenkjer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+}
+.om-meg-lenkjer .knapp { padding: 0.6rem 1.2rem; }
+
 .ferdigheiter {
     padding: clamp(1.5rem, 3vw, 2.25rem);
     background: var(--flate);
@@ -554,26 +385,9 @@ a { color: inherit; }
 .fjellstripe img:hover { filter: saturate(1.15); }
 
 
-/* ---------- Botn ---------- */
-
-.botn {
-    background: var(--natt);
-    color: var(--natt-tekst);
-    padding-block: 2rem;
-    font-size: 0.9rem;
-}
-
-.botn-innhald { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
-.botn p { margin: 0; }
-
-
 /* ---------- Mobil ---------- */
 
 @media (max-width: 820px) {
-    :root { --skrå: 10vw; }
-
-    .toppfelt nav a:not(.nav-github) { display: none; }
-
     .hero { justify-items: start; }
 
     .hero::before {
@@ -591,9 +405,4 @@ a { color: inherit; }
     .om-meg-rutenett { grid-template-columns: 1fr; }
 
     .fjellstripe { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation: none !important; transition: none !important; }
-    html { scroll-behavior: auto; }
 }

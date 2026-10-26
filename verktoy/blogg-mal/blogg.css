@@ -1,0 +1,365 @@
+/*
+  Stil som berre gjeld bloggen. Fargar, skrifter, knappar, toppfelt og botn
+  ligg i ../felles.css, som blir lasta før denne fila.
+*/
+
+/* ---------- Toppstripe med bilete ---------- */
+
+.sidetopp {
+    position: relative;
+    height: clamp(8.5rem, 16vw, 12rem);
+    background:
+        linear-gradient(180deg, rgb(11 26 48 / 60%), rgb(11 26 48 / 25%)),
+        url('../bileter/hausnes-nordlys.jpg') center 40% / cover no-repeat,
+        var(--natt);
+    /* Same skrå kant som på startsida */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - var(--skrå) * 0.5));
+}
+
+
+/* ---------- Ramme ---------- */
+
+.ramme {
+    width: min(760px, 100% - 2rem);
+    margin-inline: auto;
+    padding-block: clamp(2rem, 5vw, 3.5rem) clamp(4rem, 8vw, 6rem);
+}
+
+.ramme-brei { width: min(1180px, 100% - 2rem); }
+
+.overtittel a { color: inherit; text-decoration: none; }
+.overtittel a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.meta {
+    margin: 0;
+    color: var(--dempa);
+    font-size: 0.92rem;
+}
+.meta a { color: inherit; }
+
+
+/* ---------- Oversikta ---------- */
+
+.blogg-hovud h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+
+.ingress {
+    margin: 1rem 0 0;
+    max-width: 36rem;
+    color: var(--dempa);
+    font-size: 1.15rem;
+}
+
+.blogg-hovud + .filterknappar { margin: 2rem 0; }
+
+.filterknapp { text-decoration: none; }
+
+.filtertal {
+    font-size: 0.75rem;
+    opacity: 0.6;
+    font-variant-numeric: tabular-nums;
+}
+
+.innleggsliste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    gap: 1.5rem;
+}
+
+.innleggskort {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--flate);
+    border: 1px solid var(--strek);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--skugge);
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.innleggskort:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 2px 4px rgb(11 26 48 / 8%), 0 18px 40px rgb(11 26 48 / 14%);
+}
+
+.kort-bilete {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-bottom: 1px solid var(--strek);
+}
+
+.kort-bilete img,
+.tomt-bilete {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+.innleggskort:hover .kort-bilete img { transform: scale(1.06); }
+
+.tomt-bilete {
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    background: linear-gradient(135deg, #2570c9, #0b1a30);
+}
+
+.kort-tekst {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.4rem;
+    padding: 1.25rem 1.35rem 1.35rem;
+}
+
+.kort-tekst h2 { font-size: 1.45rem; }
+
+.kort-tekst p:not(.meta) {
+    margin: 0 0 0.6rem;
+    color: var(--dempa);
+    font-size: 0.98rem;
+}
+
+.taggar {
+    list-style: none;
+    margin: auto 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.taggar li {
+    padding: 0.15rem 0.55rem;
+    border-radius: 6px;
+    background: var(--snø);
+    color: var(--dempa);
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+
+/* ---------- Innlegg ---------- */
+
+.innlegg-hovud { margin-bottom: 2rem; }
+
+.innlegg-hovud h1 {
+    font-size: clamp(2.25rem, 5.5vw, 3.6rem);
+    margin-bottom: 1rem;
+}
+
+.toppbilete {
+    width: 100%;
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+}
+
+.innleggstekst {
+    font-size: 1.08rem;
+    line-height: 1.75;
+    overflow-wrap: break-word;
+}
+
+.innleggstekst p { margin: 0 0 1.25em; }
+
+.innleggstekst h2,
+.innleggstekst h3 { margin: 2.5rem 0 1rem; }
+.innleggstekst h2 { font-size: 1.9rem; }
+.innleggstekst h3 { font-size: 1.4rem; }
+
+.innleggstekst a {
+    color: var(--oransje);
+    text-underline-offset: 3px;
+}
+
+.innleggstekst img {
+    height: auto;
+    border-radius: 8px;
+}
+
+.innleggstekst ul,
+.innleggstekst ol { padding-left: 1.4rem; margin: 0 0 1.25em; }
+
+.innleggstekst blockquote {
+    margin: 2rem 0;
+    padding: 0.75rem 1.5rem;
+    border-left: 4px solid var(--oransje);
+    background: var(--flate);
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+.innleggstekst blockquote p:last-child { margin-bottom: 0; }
+
+.innleggstekst pre {
+    background: var(--natt);
+    color: var(--natt-tekst);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.25rem;
+    overflow-x: auto;
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+
+.innleggstekst code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+
+.innleggstekst table {
+    display: block;
+    overflow-x: auto;
+    border-collapse: collapse;
+    margin: 0 0 1.25em;
+}
+
+.innleggstekst td,
+.innleggstekst th {
+    border: 1px solid var(--strek);
+    padding: 0.4rem 0.65rem;
+}
+
+/* Bilete med bilettekst og justering frå WordPress */
+.innleggstekst figure {
+    margin: 2rem 0;
+    max-width: 100%;
+}
+
+.innleggstekst figcaption {
+    margin-top: 0.5rem;
+    color: var(--dempa);
+    font-size: 0.9rem;
+}
+
+.aligncenter { margin-inline: auto; }
+
+@media (min-width: 700px) {
+    .alignleft {
+        float: left;
+        max-width: 50%;
+        margin: 0.3rem 1.75rem 1rem 0;
+    }
+
+    .alignright {
+        float: right;
+        max-width: 50%;
+        margin: 0.3rem 0 1rem 1.75rem;
+    }
+}
+
+.innleggstekst::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Video */
+.innleggstekst iframe,
+.innlegg > .video iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: var(--radius);
+    margin: 2rem 0;
+}
+
+/* Galleri */
+.galleri {
+    display: grid;
+    grid-template-columns: repeat(var(--kolonnar, 3), 1fr);
+    gap: 0.5rem;
+    margin: 2rem 0;
+}
+
+.galleri img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* GPS-kart */
+.gpx-kart {
+    height: 420px;
+    border: 1px solid var(--strek);
+    border-radius: var(--radius);
+    background: var(--flate);
+}
+
+.gpx-statistikk {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.25rem;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.92rem;
+}
+
+.gpx-statistikk strong { color: var(--blekk); }
+
+.gpx-profil {
+    display: block;
+    width: 100%;
+    height: 90px;
+    margin-top: 0.5rem;
+}
+
+.gpx-profil path {
+    fill: rgb(219 58 3 / 14%);
+    stroke: var(--oransje);
+    stroke-width: 1.5;
+    vector-effect: non-scaling-stroke;
+}
+
+.merknad {
+    padding: 0.9rem 1.1rem;
+    background: var(--flate);
+    border: 1px solid var(--strek);
+    border-radius: var(--radius);
+}
+
+
+/* ---------- Førre / neste ---------- */
+
+.forrige-neste {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 3.5rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--strek);
+}
+
+.forrige-neste a {
+    font-family: var(--font-tittel);
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+.forrige-neste a:hover { color: var(--oransje); }
+
+.forrige-neste span {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-family: var(--font-tekst);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--dempa);
+}
+
+.forrige-neste .neste {
+    grid-column: 2;
+    text-align: right;
+}
+
+
+/* ---------- Mobil ---------- */
+
+@media (max-width: 600px) {
+    .galleri { grid-template-columns: repeat(2, 1fr); }
+    .gpx-kart { height: 320px; }
+    .forrige-neste { grid-template-columns: 1fr; }
+    .forrige-neste .neste { grid-column: 1; text-align: left; }
+}

@@ -1,2 +1,11 @@
-settings.json
 .DS_Store
+
+# WordPress-backupen inneheld private innlegg og meldingar frå kontaktskjemaet
+backup-wordpress-okt-2026/
+
+# Upubliserte utkast
+utkast/
+
+# Lokale innstillingar (frå hausnes.github.io)
+settings.json
+__pycache__/

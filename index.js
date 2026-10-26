@@ -2,7 +2,6 @@ const { framheva, taggRekkjefolgje, prosjekt } = PORTFOLIO;
 
 const valdeTaggar = new Set(lesTaggarFraUrl());
 
-document.getElementById("aar").textContent = new Date().getFullYear();
 visFramheva();
 visFilterknappar();
 visProsjekt();

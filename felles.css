@@ -1,0 +1,284 @@
+/*
+  Felles stil for heile hausnes.no: startsida, bloggen og 404-sida.
+  Stil som berre gjeld éi side, ligg i index.css eller blogg/blogg.css.
+*/
+
+/* ---------- Fargar og grunnoppsett ---------- */
+
+:root {
+    --snø: #f5f7fa;
+    --flate: #ffffff;
+    --blekk: #0b1a30;
+    --dempa: #556275;
+    --strek: #dde3ea;
+    --himmel: #1d6fd6;
+    --oransje: #db3a03;
+    --oransje-mørk: #a82c00;
+    --natt: #0b1a30;
+    --natt-tekst: #e9eef5;
+    --skrå: 7vw;
+    --radius: 14px;
+    --skugge: 0 1px 2px rgb(11 26 48 / 6%), 0 8px 24px rgb(11 26 48 / 8%);
+    --font-tittel: "Bricolage Grotesque", system-ui, sans-serif;
+    --font-tekst: "Inter", system-ui, sans-serif;
+    color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --snø: #0d1626;
+        --flate: #15213a;
+        --blekk: #e9eef5;
+        --dempa: #9aa8bc;
+        --strek: #26344f;
+        --himmel: #5da0ff;
+        --oransje: #ff6a2b;
+        --oransje-mørk: #ff8a55;
+        --natt: #060d19;
+        --skugge: 0 1px 2px rgb(0 0 0 / 30%), 0 8px 24px rgb(0 0 0 / 30%);
+        color-scheme: dark;
+    }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    background: var(--snø);
+    color: var(--blekk);
+    font-family: var(--font-tekst);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+
+h1, h2, h3 {
+    font-family: var(--font-tittel);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+a { color: inherit; }
+
+.innhald {
+    width: min(1180px, 100% - 2rem);
+    margin-inline: auto;
+}
+
+.hopp {
+    position: absolute;
+    left: 1rem;
+    top: -3rem;
+    z-index: 100;
+    padding: 0.5rem 1rem;
+    background: var(--oransje);
+    color: white;
+}
+.hopp:focus { top: 1rem; }
+
+:focus-visible {
+    outline: 3px solid var(--oransje);
+    outline-offset: 3px;
+}
+
+.overtittel {
+    margin: 0 0 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--oransje);
+}
+
+
+/* ---------- Knappar ---------- */
+
+.knapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.8rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.15s, background-color 0.15s;
+}
+.knapp:hover { transform: translateY(-2px); }
+
+.knapp-primar { background: var(--oransje); color: white; }
+.knapp-primar:hover { background: var(--oransje-mørk); }
+
+.knapp-glas {
+    background: rgb(255 255 255 / 16%);
+    color: white;
+    border: 1px solid rgb(255 255 255 / 45%);
+    backdrop-filter: blur(8px);
+}
+
+.knapp-omriss {
+    border: 1.5px solid currentColor;
+    color: inherit;
+}
+
+
+/* ---------- Toppfelt ---------- */
+
+.toppfelt {
+    position: absolute;
+    inset: 0 0 auto;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem clamp(1rem, 4vw, 3rem);
+    color: white;
+}
+
+.logo {
+    font-family: var(--font-tittel);
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.logo span { color: var(--oransje); }
+
+.toppfelt nav { display: flex; gap: clamp(0.75rem, 2.5vw, 2rem); }
+
+.toppfelt nav a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-shadow: 0 1px 8px rgb(0 0 0 / 30%);
+}
+.toppfelt nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* Hamburgarmeny: knappen blir berre vist på mobil (sjå nedst) */
+.menyknapp { display: none; }
+
+.menyknapp-strekar,
+.menyknapp-strekar::before,
+.menyknapp-strekar::after {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    transition: transform 0.2s, opacity 0.2s;
+}
+.menyknapp-strekar { position: relative; }
+.menyknapp-strekar::before,
+.menyknapp-strekar::after { content: ""; position: absolute; left: 0; }
+.menyknapp-strekar::before { top: -6px; }
+.menyknapp-strekar::after { top: 6px; }
+
+/* Når menyen er open, blir strekane til ein kross */
+.toppfelt.open .menyknapp-strekar { background: transparent; }
+.toppfelt.open .menyknapp-strekar::before { transform: translateY(6px) rotate(45deg); }
+.toppfelt.open .menyknapp-strekar::after { transform: translateY(-6px) rotate(-45deg); }
+
+
+/* ---------- Filter ---------- */
+
+.filterknappar { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.filterknapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.5rem 0.95rem;
+    border: 1.5px solid var(--strek);
+    border-radius: 999px;
+    background: var(--flate);
+    color: var(--blekk);
+    font: 500 0.92rem var(--font-tekst);
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s, color 0.15s;
+}
+.filterknapp:hover { border-color: var(--blekk); }
+
+.filterknapp[aria-pressed="true"] {
+    background: var(--blekk);
+    border-color: var(--blekk);
+    color: var(--snø);
+}
+.filterknapp[aria-current] {
+    background: var(--blekk);
+    border-color: var(--blekk);
+    color: var(--snø);
+}
+
+
+/* ---------- Botn ---------- */
+
+.botn {
+    background: var(--natt);
+    color: var(--natt-tekst);
+    padding-block: 2rem;
+    font-size: 0.9rem;
+}
+
+.botn-innhald { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.botn p { margin: 0; }
+.botn-lenkjer a { text-underline-offset: 3px; }
+.botn-lenkjer a:hover { color: white; }
+
+
+/* ---------- Mobil ---------- */
+
+@media (max-width: 820px) {
+    :root { --skrå: 10vw; }
+
+    /* Utan JavaScript: berre GitHub-lenkja, som før */
+    .toppfelt:not(.har-meny) nav a:not(.nav-github) { display: none; }
+
+    .har-meny .menyknapp {
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        background: rgb(255 255 255 / 16%);
+        border: 1px solid rgb(255 255 255 / 45%);
+        backdrop-filter: blur(8px);
+        color: white;
+        cursor: pointer;
+    }
+
+    .har-meny nav {
+        display: none;
+        position: absolute;
+        top: calc(100% - 0.25rem);
+        right: clamp(1rem, 4vw, 3rem);
+        min-width: 13rem;
+        flex-direction: column;
+        gap: 0;
+        padding: 0.5rem;
+        background: var(--natt);
+        border: 1px solid rgb(255 255 255 / 12%);
+        border-radius: var(--radius);
+        box-shadow: var(--skugge);
+    }
+    .har-meny.open nav { display: flex; }
+
+    .har-meny nav a {
+        padding: 0.75rem 1rem;
+        border-radius: 10px;
+        color: var(--natt-tekst);
+        font-size: 1rem;
+        text-shadow: none;
+    }
+    .har-meny nav a:hover,
+    .har-meny nav a:focus-visible { background: rgb(255 255 255 / 10%); text-decoration: none; }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    html { scroll-behavior: auto; }
+}

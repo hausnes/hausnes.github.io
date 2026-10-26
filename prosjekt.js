@@ -158,8 +158,8 @@ const PORTFOLIO = {
       taggar: ["JavaScript", "HTML", "CSS"],
       ikon: "💻",
       bilete: "bileter/prosjekt/matrix-terminal.png",
-      demo: "matrix-terminal/matrix-terminal.html",
-      kjelde: "https://github.com/hausnes/hausnes.github.io/tree/master/matrix-terminal",
+      demo: "https://hausnes.github.io/matrix-terminal/",
+      kjelde: "https://github.com/hausnes/matrix-terminal",
     },
     {
       id: "kakeklikker",
@@ -169,8 +169,8 @@ const PORTFOLIO = {
       taggar: ["JavaScript", "HTML", "CSS", "Spel"],
       ikon: "🍰",
       bilete: "bileter/prosjekt/kakeklikker.png",
-      demo: "kakeklikker/",
-      kjelde: "https://github.com/hausnes/hausnes.github.io/tree/master/kakeklikker",
+      demo: "https://hausnes.github.io/kakeklikkar/",
+      kjelde: "https://github.com/hausnes/kakeklikkar",
     },
   ],
 };
