@@ -7,7 +7,7 @@ Nytt innlegg (lagar blogg/tur-til-oksen.html frå verktoy/mal-innlegg.html):
 
 Etter at du har skrive eller endra innlegg:
     python3 verktoy/oppdater_blogg.py
-Det byggjer blogg/index.html, feed.xml og sitemap.xml på nytt, og oppdaterer
+Det byggjer blogg/index.html, blogg/feed.xml og sitemap.xml (på rota) på nytt, og oppdaterer
 lenkjene til førre og neste innlegg nedst i kvart innlegg.
 
 Skriptet les opplysningane frå <head> i kvart innlegg:
@@ -418,10 +418,12 @@ def oppdater():
         endra.append('../404.html')
 
     for namn, innhald in (('index.html', oversiktsside(innlegg)),
-                          ('feed.xml', rss(innlegg[:20])),
-                          ('sitemap.xml', sitemap(innlegg, sider))):
+                          ('feed.xml', rss(innlegg[:20]))):
         if skriv_om_endra(BLOGG / namn, innhald):
             endra.append(namn)
+    # Nettkartet dekkjer heile nettstaden, så det ligg på rota
+    if skriv_om_endra(ROT / 'sitemap.xml', sitemap(innlegg, sider)):
+        endra.append('../sitemap.xml')
 
     print(f'{len(innlegg)} innlegg og {len(sider)} sider i blogg/.')
     if not endra:

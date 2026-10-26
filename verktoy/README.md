@@ -32,7 +32,7 @@ Alle kommandoar blir køyrde frå rota av repoet (`hausnes.no/`).
    python3 verktoy/oppdater_blogg.py
    ```
 
-   Dette oppdaterer `blogg/index.html`, `feed.xml`, `sitemap.xml` og
+   Dette oppdaterer `blogg/index.html`, `blogg/feed.xml`, `sitemap.xml` (på rota) og
    førre/neste-lenkjene nedst i innlegga. Les åtvaringane til slutt. Dei seier frå
    om du har gløymt samandraget, eller om teksten frå malen framleis står att.
 
