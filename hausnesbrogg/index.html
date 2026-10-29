@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="nn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hausnesbrogg – heimabrygg på gamlemåten</title>
+    <meta name="description" content="Hausnesbrogg: heimabrygg over open eld, med brakje, kveik frå Voss og vatn frå brønnen i Hausnes. Ein tradisjon frå Hardanger og Voss, gått i arv frå far til son.">
+    <!-- Ikkje lenkja frå startsida enno. Fjern denne linja når sida er klar. -->
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="https://www.hausnes.no/hausnesbrogg/">
+    <meta property="og:title" content="Hausnesbrogg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hausnes.no/hausnesbrogg/">
+    <meta property="og:site_name" content="Jo Bjørnar Hausnes">
+    <meta property="og:description" content="Heimabrygg på gamlemåten – over open eld, med brakje og kveik.">
+    <meta property="og:image" content="https://www.hausnes.no/hausnesbrogg/bileter/web/far-min-kjele-1800.jpg">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍺</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../felles.css">
+    <link rel="stylesheet" href="hausnesbrogg.css">
+    <script src="../felles.js" defer></script>
+    <script src="brygg.js" defer></script>
+    <script src="hausnesbrogg.js" defer></script>
+</head>
+<body>
+    <a class="hopp" href="#prosessen">Hopp til innhaldet</a>
+
+    <header class="toppfelt">
+        <a class="logo" href="../">JBH<span>.</span></a>
+        <button class="menyknapp" type="button" aria-expanded="false" aria-controls="hovudmeny" aria-label="Opne meny" hidden>
+            <span class="menyknapp-strekar" aria-hidden="true"></span>
+        </button>
+        <nav id="hovudmeny" aria-label="Hovudmeny">
+            <a href="#arven">Arven</a>
+            <a href="#prosessen">Prosessen</a>
+            <a href="#brygga">Brygga</a>
+            <a href="../">Til startsida</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img class="hero-bilete"
+             src="bileter/web/far-min-kjele-1800.jpg"
+             srcset="bileter/web/far-min-kjele-900.jpg 900w, bileter/web/far-min-kjele-1800.jpg 1800w"
+             sizes="100vw"
+             alt="Far min fyrer under den store bryggekjelen. Flammane slikkar opp langs kjelen.">
+        <div class="hero-tekst">
+            <p class="overtittel">Heimabrygg frå Hardanger</p>
+            <h1>Hausnes<em>brogg</em></h1>
+            <p class="hero-ingress">
+                Øl brygga på gamlemåten: kjele over open eld, brakje frå fjellet, kveik frå Voss
+                og vatn frå brønnen på garden. Ei oppskrift som har gått frå far til son i generasjonar.
+            </p>
+            <div class="hero-knappar">
+                <a class="knapp knapp-primar" href="#prosessen">Slik bryggar me</a>
+                <a class="knapp knapp-glas" href="#brygga">Sjå alle brygga</a>
+            </div>
+        </div>
+        <dl class="hero-tal">
+            <div><dt>Brygg</dt><dd id="tal-brygg">24</dd></div>
+            <div><dt>Sidan</dt><dd id="tal-sidan">2018</dd></div>
+            <div><dt>Snitt</dt><dd id="tal-snitt">7,6 %</dd></div>
+        </dl>
+    </section>
+
+    <main>
+        <section id="arven" class="seksjon arven" aria-labelledby="arven-tittel">
+            <div class="innhald arven-rutenett">
+                <div class="arven-tekst">
+                    <p class="overtittel">Arven</p>
+                    <h2 id="arven-tittel">Lært ved kjelen, ikkje frå ei bok</h2>
+                    <p>
+                        I Hardanger og på Voss har folk brygga sitt eige øl i hundrevis av år. Ølet var
+                        ein del av høgtidene, av jola, bryllaupa og gravøla, og kvar gard hadde sin
+                        eigen kveik og si eiga oppskrift.
+                    </p>
+                    <p>
+                        Me lærte det av far min, som lærte det av far sin, som lærte det av far sin.
+                        Det meste sit i hendene og i nasen, og vert gjeve vidare ved at me står saman
+                        ved kjelen ein heil dag.
+                    </p>
+                    <p>
+                        I dag bryggar Hausnesbrogg oftast saman med min gode kompis Svein Ringheim og
+                        bryggeriet hans, <strong>Mjøstølen Bryggeri</strong>. Ølet vert brygga fleire
+                        gonger i året, gjerne til jol, påske, sommar og haust. Kvart brygg får sitt eige
+                        namn og sin eigen etikett.
+                    </p>
+                    <blockquote class="sitat">
+                        «Denna va' de heldige med.»
+                        <cite>Mora til ein av bryggekarane</cite>
+                    </blockquote>
+                </div>
+                <figure class="arven-bilete arven-bilete-stor">
+                    <img src="bileter/web/far-min-laerer-oss-opp-900.jpg"
+                         srcset="bileter/web/far-min-laerer-oss-opp-900.jpg 900w, bileter/web/far-min-laerer-oss-opp-1800.jpg 1800w"
+                         sizes="(max-width: 820px) 100vw, 30vw"
+                         alt="Far min står ved den store kjelen over elden og lærer oss opp, medan ein av bryggekarane ser på."
+                         loading="lazy">
+                    <figcaption>Far min lærer oss opp.</figcaption>
+                </figure>
+                <figure class="arven-bilete arven-bilete-brei">
+                    <img src="bileter/web/bryggeloftet-svart-kvitt-900.jpg"
+                         srcset="bileter/web/bryggeloftet-svart-kvitt-900.jpg 900w, bileter/web/bryggeloftet-svart-kvitt-1800.jpg 1800w"
+                         sizes="(max-width: 820px) 100vw, 40vw"
+                         alt="Svart-kvitt bilete av bryggerommet i løa, med eit langbord og bryggekarar som slappar av."
+                         loading="lazy">
+                    <figcaption>Bryggerommet i løa i Hausnes.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="seksjon ingrediensar" aria-labelledby="ingrediensar-tittel">
+            <div class="innhald">
+                <p class="overtittel">Det som går i kjelen</p>
+                <h2 id="ingrediensar-tittel">Fem ting, og ein heil dag</h2>
+                <ul class="ingrediens-liste">
+                    <li>
+                        <span class="ingrediens-ikon" aria-hidden="true">🌲</span>
+                        <h3>Brakje</h3>
+                        <p>Einer, henta på Olastøl, i Espelandsdalen, Kinsarvik, Osa og Bønes. Gjev ølet den skogsfriske smaken.</p>
+                    </li>
+                    <li>
+                        <span class="ingrediens-ikon" aria-hidden="true">🫙</span>
+                        <h3>Kveik</h3>
+                        <p>Gamal gardsgjær frå Voss, mellom anna Rivenes-kveik frå Dyrvedalen. Han likar det varmt og jobbar fort.</p>
+                    </li>
+                    <li>
+                        <span class="ingrediens-ikon" aria-hidden="true">🌾</span>
+                        <h3>Malt</h3>
+                        <p>Mest pilsnermalt, gjerne 25–30 kg. Av og til med munich- eller pale ale-malt for meir fylde.</p>
+                    </li>
+                    <li>
+                        <span class="ingrediens-ikon" aria-hidden="true">🌿</span>
+                        <h3>Humle</h3>
+                        <p>Ein moderne vri på det gamle: Cascade og Amarillo, av og til ein skvett Chinook.</p>
+                    </li>
+                    <li>
+                        <span class="ingrediens-ikon" aria-hidden="true">💧</span>
+                        <h3>Vatn</h3>
+                        <p>Frå gamlebrønnen eller nyebrønnen i Hausnes. Bryggjarane meiner det smakar skilnad.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="prosessen" class="seksjon prosessen" aria-labelledby="prosessen-tittel">
+            <div class="innhald">
+                <p class="overtittel">Prosessen</p>
+                <h2 id="prosessen-tittel">Frå brakje til oppskåka</h2>
+                <p class="seksjon-ingress">
+                    Ein bryggedag startar tidleg og sluttar seint. Slik går det føre seg, steg for steg.
+                </p>
+            </div>
+
+            <ol class="steg-liste innhald">
+                <li class="steg">
+                    <figure class="steg-bilete">
+                        <img src="bileter/web/prosess-brakje-900.jpg"
+                             srcset="bileter/web/prosess-brakje-900.jpg 900w, bileter/web/prosess-brakje-1800.jpg 1800w"
+                             sizes="(max-width: 820px) 100vw, 45vw"
+                             alt="Ferske einerkvistar lagt tett i botnen av eit blått kar, sett ovanfrå."
+                             loading="lazy">
+                    </figure>
+                    <div class="steg-tekst">
+                        <p class="steg-nr">Steg 1</p>
+                        <h3>Hente brakje</h3>
+                        <p>
+                            Før bryggedagen går me til fjells etter brakje, som er det gamle ordet for einer.
+                            Me skjer friske, grøne kvistar. Kvar plass gjev sin eigen smak, og difor står det
+                            alltid kvar brakjen kjem frå på etiketten.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="steg">
+                    <figure class="steg-bilete">
+                        <img src="bileter/web/far-min-kjele-900.jpg"
+                             srcset="bileter/web/far-min-kjele-900.jpg 900w, bileter/web/far-min-kjele-1800.jpg 1800w"
+                             sizes="(max-width: 820px) 100vw, 45vw"
+                             alt="Glødande ved og flammar under den store svarte bryggekjelen."
+                             loading="lazy">
+                    </figure>
+                    <div class="steg-tekst">
+                        <p class="steg-nr">Steg 2</p>
+                        <h3>Fyre opp og lage brakjelåg</h3>
+                        <p>
+                            Vatnet frå brønnen går i den store kjelen over open eld. Brakjen kokar med,
+                            og vatnet blir til <em>brakjelåg</em>, eit gyllent einerte som er grunnlaget for
+                            heile ølet. Elden må passast heile dagen.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="steg">
+                    <figure class="steg-bilete">
+                        <img src="bileter/web/framfor-kjelen-900.jpg"
+                             srcset="bileter/web/framfor-kjelen-900.jpg 900w, bileter/web/framfor-kjelen-1800.jpg 1800w"
+                             sizes="(max-width: 820px) 100vw, 45vw"
+                             alt="Damp stig opp frå kjelen medan bryggekarane sit ved elden i det mørke bryggerommet."
+                             loading="lazy">
+                    </figure>
+                    <div class="steg-tekst">
+                        <p class="steg-nr">Steg 3</p>
+                        <h3>Mesking</h3>
+                        <p>
+                            Malten blir rørt ut i den varme brakjelågen. Så står det og trekkjer, og sukkeret i
+                            kornet løyser seg i vatnet. Dette er tida for å setje seg ved elden og ta ein prat.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="steg">
+                    <figure class="steg-bilete">
+                        <img src="bileter/web/prosess-brakje-stein-900.jpg"
+                             srcset="bileter/web/prosess-brakje-stein-900.jpg 900w, bileter/web/prosess-brakje-stein-1800.jpg 1800w"
+                             sizes="(max-width: 820px) 100vw, 45vw"
+                             alt="Ein flat stein ligg oppå eit lag med einer i botnen av karet."
+                             loading="lazy">
+                    </figure>
+                    <div class="steg-tekst">
+                        <p class="steg-nr">Steg 4</p>
+                        <h3>Silting gjennom brakje</h3>
+                        <p>
+                            I botnen av silkaret legg me eit tjukt lag brakje, med ein stein oppå som held det
+                            på plass. Mesken renn sakte gjennom, og einerkvistane fungerer som eit naturleg filter.
+                            Det som kjem ut, er søt vørter.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="steg">
+                    <figure class="steg-bilete">
+                        <img src="bileter/web/utebrygging-02-900.jpg"
+                             srcset="bileter/web/utebrygging-02-900.jpg 900w, bileter/web/utebrygging-02-1800.jpg 1800w"
+                             sizes="(max-width: 820px) 100vw, 45vw"
+                             alt="Fem bryggekarar samla rundt kjelen ute på tunet i Hausnes ein sommardag."
+                             loading="lazy">
+                    </figure>
+                    <div class="steg-tekst">
+                        <p class="steg-nr">Steg 5</p>
+                        <h3>Koking med humle</h3>
+                        <p>
+                            Vørteren går attende i kjelen og kokar over elden, og humlen går oppi. Om sommaren
+                            flyttar me heile bryggeriet ut på tunet. Det er alltid litt vørter som ikkje får
+                            plass i kjelen, og det har blitt til eigne eksperiment, som Granvinsgraps.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="steg">
+                    <figure class="steg-bilete">
+                        <img src="bileter/web/utebrygging-01-900.jpg"
+                             srcset="bileter/web/utebrygging-01-900.jpg 900w, bileter/web/utebrygging-01-1800.jpg 1800w"
+                             sizes="(max-width: 820px) 100vw, 45vw"
+                             alt="Gjæringstønna står klar på tunet, medan bryggekarane står rundt kjelane."
+                             loading="lazy">
+                    </figure>
+                    <div class="steg-tekst">
+                        <p class="steg-nr">Steg 6</p>
+                        <h3>Kjøling og kveik</h3>
+                        <p>
+                            Når vørteren er avkjølt til han er handvarm, blir kveiken tilsett, og alt går over i
+                            gjæringstønna. Kveik likar det varmt og jobbar fort. Eit par dagar etter kan
+                            ølet vere klart til å takast.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="steg">
+                    <figure class="steg-bilete">
+                        <img src="bileter/web/oppskaka-mosstova-900.jpg"
+                             srcset="bileter/web/oppskaka-mosstova-900.jpg 900w, bileter/web/oppskaka-mosstova-1800.jpg 1800w"
+                             sizes="(max-width: 820px) 100vw, 45vw"
+                             alt="Ein stor gjeng sit samla i ei stove og smakar på ølet."
+                             loading="lazy">
+                    </figure>
+                    <div class="steg-tekst">
+                        <p class="steg-nr">Steg 7</p>
+                        <h3>Oppskåka</h3>
+                        <p>
+                            Ei veke eller to etter bryggedagen er det oppskåka: ølet blir smaka og delt ut, og
+                            venner og familie samlast. Først då veit me om det vart eit brygg å hugse.
+                        </p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="glimt" aria-label="Fleire bilete frå bryggedagane">
+            <figure>
+                <img src="bileter/web/bryggeloftet-kveldskos-900.jpg"
+                     srcset="bileter/web/bryggeloftet-kveldskos-900.jpg 900w, bileter/web/bryggeloftet-kveldskos-1800.jpg 1800w"
+                     sizes="(max-width: 820px) 100vw, 60vw"
+                     alt="Kveldskos i bryggerommet, med levande lys på langbordet og juletre i hjørnet."
+                     loading="lazy">
+                <figcaption>Kveldskos i bryggerommet ein desemberkveld.</figcaption>
+            </figure>
+            <figure>
+                <img src="bileter/web/oppskaka-harald-900.jpg"
+                     srcset="bileter/web/oppskaka-harald-900.jpg 900w, bileter/web/oppskaka-harald-1800.jpg 1800w"
+                     sizes="(max-width: 820px) 100vw, 30vw"
+                     alt="Harald smiler breitt med eit stort glas heimabrygg, med fjord og fjell bak seg."
+                     loading="lazy">
+                <figcaption>Oppskåka i Hausnes.</figcaption>
+            </figure>
+        </section>
+
+        <section id="brygga" class="seksjon brygga" aria-labelledby="brygga-tittel">
+            <div class="innhald">
+                <p class="overtittel">Brygga</p>
+                <h2 id="brygga-tittel">Alle brygga frå Hausnesbrogg</h2>
+                <p class="seksjon-ingress">
+                    Kvart brygg har sitt eige namn og sin eigen etikett. Trykk på eit brygg for å lese meir.
+                </p>
+
+                <div class="filterknappar" id="sesongfilter" role="group" aria-label="Filtrer etter sesong"></div>
+                <p class="visar" id="visar" aria-live="polite"></p>
+
+                <ul class="brygg-rutenett" id="brygg-liste"></ul>
+
+                <p class="untappd-lenkje">
+                    Alle brygga ligg òg på <a href="https://untappd.com/Hausnesbrogg/beer">Untappd ↗</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <dialog class="brygg-dialog" id="brygg-dialog" aria-labelledby="dialog-tittel">
+        <button class="dialog-lukk" type="button" aria-label="Lukk">×</button>
+        <div class="dialog-innhald">
+            <img class="dialog-etikett" src="" alt="">
+            <div class="dialog-tekst">
+                <p class="overtittel" id="dialog-sesong"></p>
+                <h2 id="dialog-tittel"></h2>
+                <ul class="dialog-fakta" id="dialog-fakta"></ul>
+                <div id="dialog-skildring"></div>
+                <a class="knapp knapp-omriss" id="dialog-untappd" href="#">Sjå på Untappd ↗</a>
+            </div>
+        </div>
+    </dialog>
+
+    <footer class="botn">
+        <div class="innhald botn-innhald">
+            <p>© <span id="aar"></span> Hausnesbrogg · Jo Bjørnar Hausnes</p>
+            <p class="botn-lenkjer">
+                <a href="../">Startsida</a> ·
+                <a href="https://untappd.com/Hausnesbrogg">Untappd</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

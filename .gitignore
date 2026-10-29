@@ -9,3 +9,5 @@ utkast/
 # Lokale innstillingar (frå hausnes.github.io)
 settings.json
 __pycache__/
+
+hausnesbrogg/bileter/*.jpg
