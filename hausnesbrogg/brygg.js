@@ -10,6 +10,18 @@
 
 const BRYGG = [
   {
+    "id": "jolastol-2026",
+    "namn": "Jolastøl (2026)",
+    "dato": "2026-11-01",
+    "abv": 8.0,
+    "sesong": "Jol",
+    "mjostolen": false,
+    "tekst": [
+      "Det går mot mørkare tider, og då er det ekstra viktig med ljose øyeblikk - gjerne i form av heimabrygg. Årets joleøl er laga på brakje frå Olastøl, pilsner- og Münchner-malt, Rivenes-kveik, Cascade-, Amarillo- og Chinook-humle, og vatn frå nyebrønnen. Det blei impulsbrygging, så færre deltakarar enn vanleg, men Hausneskarane var på plass."
+    ],
+    "untappd": "https://untappd.com/b/hausnesbrogg-jolastol-2026/7655739"
+  },
+  {
     "id": "sommarsol-2026",
     "namn": "Sommarsøl (2026)",
     "dato": "2026-06-23",

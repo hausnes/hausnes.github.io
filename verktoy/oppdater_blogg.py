@@ -352,7 +352,8 @@ def rss(innlegg):
 
 
 def sitemap(innlegg, sider):
-    adresser = [('/', None), ('/blogg/', innlegg[0]['endra'] if innlegg else None)]
+    adresser = [('/', None), ('/hausnesbrogg/', None),
+                ('/blogg/', innlegg[0]['endra'] if innlegg else None)]
     adresser += [(e['sti'], e['endra']) for e in innlegg]
     adresser += [(e['sti'], None) for e in sider]
     rader = []
