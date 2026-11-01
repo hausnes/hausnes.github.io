@@ -53,6 +53,7 @@ HOVUDMENY = [
     ('../#framheva', 'I søkelyset'),
     ('../#prosjekt', 'Prosjekt'),
     ('index.html', 'Blogg'),
+    ('../hausnesbrogg/', 'Hausnesbrogg'),
     ('../#om-meg', 'Om meg'),
     ('https://github.com/hausnes', 'GitHub ↗'),
 ]
