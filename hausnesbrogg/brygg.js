@@ -10,6 +10,18 @@
 
 const BRYGG = [
   {
+    "id": "smarips",
+    "namn": "Smårips",
+    "dato": "2026-11-01",
+    "abv": 5.5,
+    "sesong": "Haust",
+    "mjostolen": false,
+    "tekst": [
+      "Under produksjonen av Jolastøl (2026) var det ikkje plass til 10 liter, så dei gjekk i storkjelen på kjøkkenet og fekk sine tilmålte 2 timar med koking aleine der. Eksperimenteringsoffiseren heiv i rips- og solbærsaft, samt honning. Humle i form av Amarillo, Cascade og Tettnanger. Umiddelbar reaksjon frå bryggarane: Uff, og urk."
+    ],
+    "untappd": "https://untappd.com/b/hausnesbrogg-smarips/7656923"
+  },
+  {
     "id": "jolastol-2026",
     "namn": "Jolastøl (2026)",
     "dato": "2026-11-01",
