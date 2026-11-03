@@ -18,6 +18,18 @@ const PORTFOLIO = {
 
   prosjekt: [
     {
+      id: "terminal-dungeon",
+      tittel: "Terminal Dungeon",
+      kort: "Ein dungeon crawler på Amalie Skram VGS, der du må forbi baristaen, IT-ansvarleg og rektor for å få vitnemålet.",
+      lang: "Fang pengar og unngå lekser, og vel om du vil betale, sjarmere, lure eller slåst deg forbi fiendane. Skriven i objektorientert Python med klassar og arv, og med fargar, animasjonar og lyd rett i terminalen, utan eksterne pakkar. Web-versjonen er ei omskriving til JavaScript som teiknar spelet på eit canvas, og krev tastatur.",
+      taggar: ["Python", "JavaScript", "Spel", "Undervisning"],
+      ikon: "🗡️",
+      bilete: "bileter/prosjekt/terminal-dungeon.png",
+      demo: "https://www.hausnes.no/terminal_dungeon/web/",
+      demoTekst: "Spel i nettlesaren",
+      kjelde: "https://github.com/hausnes/terminal_dungeon",
+    },
+    {
       id: "a-puzzle-a-day",
       tittel: "A-Puzzle-A-Day",
       kort: "Digital versjon av kalenderpuslespelet frå DragonFjord.",

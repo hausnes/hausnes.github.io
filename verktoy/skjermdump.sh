@@ -30,5 +30,6 @@ ta vent-paa-tur    "https://hausnes.github.io/vent-paa-tur/"
 ta fireplace       "https://hausnes.github.io/fireplace/"
 ta matrix-terminal "https://hausnes.github.io/matrix-terminal/"
 ta kakeklikker     "https://hausnes.github.io/kakeklikkar/"
+ta terminal-dungeon "https://hausnes.github.io/terminal_dungeon/web/"
 
 echo "Ferdig! Sjå $UT"
