@@ -25,7 +25,7 @@ const BRYGG = [
     "id": "jolastol-2026",
     "namn": "Jolastøl (2026)",
     "dato": "2026-11-01",
-    "abv": 8.0,
+    "abv": 8.4,
     "sesong": "Jol",
     "mjostolen": false,
     "tekst": [
