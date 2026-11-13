@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.hausnes.no/</loc></url>
   <url><loc>https://www.hausnes.no/hausnesbrogg/</loc></url>
+  <!-- Prosjekt som ligg i eigne repo, men blir publiserte under www.hausnes.no -->
+  <url><loc>https://www.hausnes.no/a-puzzle-a-day/</loc></url>
+  <url><loc>https://www.hausnes.no/terminal_dungeon/web/</loc></url>
+  <url><loc>https://www.hausnes.no/kulturuke/</loc></url>
+  <url><loc>https://www.hausnes.no/webutvikling/</loc></url>
+  <url><loc>https://www.hausnes.no/nordnes-sjobad/</loc></url>
+  <url><loc>https://www.hausnes.no/vent-paa-tur/</loc></url>
+  <url><loc>https://www.hausnes.no/fireplace/</loc></url>
+  <url><loc>https://www.hausnes.no/matrix-terminal/</loc></url>
+  <url><loc>https://www.hausnes.no/kakeklikkar/</loc></url>
   <url><loc>https://www.hausnes.no/blogg/</loc><lastmod>2024-02-04</lastmod></url>
   <url><loc>https://www.hausnes.no/blogg/gullfjellet-bergen.html</loc><lastmod>2024-02-04</lastmod></url>
   <url><loc>https://www.hausnes.no/blogg/sommar-i-hardanger.html</loc><lastmod>2024-01-03</lastmod></url>

@@ -6,7 +6,11 @@
   - `bilete` er valfritt. Utan bilete får kortet eit generert omslag med `ikon`.
     Skjermdumpar kan du lage med `verktoy/skjermdump.sh`.
   - `demo` og `kjelde` er valfrie lenker. `demoTekst` byter ut «Prøv sjølv» på demo-knappen.
+  - `merknad` er valfri, og blir vist som ein liten notis over lenkjene. Han kan innehalde HTML.
 */
+
+// E-postadressa blir sett saman her, så ho ikkje står i klartekst for robotar som samlar adresser.
+const EPOST = ["jb.hausnes", "gmail.com"].join("@");
 
 const PORTFOLIO = {
   framheva: "a-puzzle-a-day",
@@ -37,7 +41,7 @@ const PORTFOLIO = {
       taggar: ["JavaScript", "HTML", "CSS", "Spel"],
       ikon: "🧩",
       bilete: "bileter/prosjekt/a-puzzle-a-day.png",
-      demo: "https://hausnes.github.io/a-puzzle-a-day/",
+      demo: "https://www.hausnes.no/a-puzzle-a-day/",
       kjelde: "https://github.com/hausnes/a-puzzle-a-day",
     },
     {
@@ -79,7 +83,7 @@ const PORTFOLIO = {
       taggar: ["HTML", "CSS", "JavaScript"],
       ikon: "📜",
       bilete: "bileter/prosjekt/kulturuke.png",
-      demo: "https://hausnes.github.io/kulturuke/",
+      demo: "https://www.hausnes.no/kulturuke/",
       kjelde: "https://github.com/hausnes/kulturuke",
     },
     {
@@ -90,7 +94,7 @@ const PORTFOLIO = {
       taggar: ["HTML", "CSS", "JavaScript", "Node.js", "Undervisning"],
       ikon: "🎓",
       bilete: "bileter/prosjekt/webutvikling.png",
-      demo: "https://hausnes.github.io/webutvikling/",
+      demo: "https://www.hausnes.no/webutvikling/",
       kjelde: "https://github.com/hausnes/webutvikling",
     },
     {
@@ -101,7 +105,7 @@ const PORTFOLIO = {
       taggar: ["Python", "Data", "Undervisning"],
       ikon: "🌊",
       bilete: "bileter/prosjekt/nordnes-sjobad.png",
-      demo: "https://hausnes.github.io/nordnes-sjobad/",
+      demo: "https://www.hausnes.no/nordnes-sjobad/",
       kjelde: "https://github.com/hausnes/nordnes-sjobad",
     },
     {
@@ -112,7 +116,7 @@ const PORTFOLIO = {
       taggar: ["JavaScript", "Node.js", "Docker"],
       ikon: "🙋",
       bilete: "bileter/prosjekt/vent-paa-tur.png",
-      demo: "https://hausnes.github.io/vent-paa-tur/",
+      demo: "https://www.hausnes.no/vent-paa-tur/",
       kjelde: "https://github.com/hausnes/vent-paa-tur",
     },
     {
@@ -132,7 +136,7 @@ const PORTFOLIO = {
       taggar: ["JavaScript", "HTML", "CSS"],
       ikon: "🔥",
       bilete: "bileter/prosjekt/fireplace.png",
-      demo: "https://hausnes.github.io/fireplace/",
+      demo: "https://www.hausnes.no/fireplace/",
       kjelde: "https://github.com/hausnes/fireplace",
     },
     {
@@ -160,6 +164,9 @@ const PORTFOLIO = {
       lang: "Eit lite verktøy for å fylgje med på vekta di over tid.",
       taggar: ["JavaScript", "HTML", "CSS"],
       ikon: "⚖️",
+      demo: "https://vekt.hausnes.synology.me/",
+      demoTekst: "Opne tenesta",
+      merknad: `Tenesta krev ein invitasjonskode. <a href="mailto:${EPOST}?subject=Invitasjonskode%20til%20Tjukkebollefeiten">Send meg ein e-post</a> om du vil prøve.`,
       kjelde: "https://github.com/hausnes/tjukkebollefeiten",
     },
     {
@@ -170,7 +177,7 @@ const PORTFOLIO = {
       taggar: ["JavaScript", "HTML", "CSS"],
       ikon: "💻",
       bilete: "bileter/prosjekt/matrix-terminal.png",
-      demo: "https://hausnes.github.io/matrix-terminal/",
+      demo: "https://www.hausnes.no/matrix-terminal/",
       kjelde: "https://github.com/hausnes/matrix-terminal",
     },
     {
@@ -181,7 +188,7 @@ const PORTFOLIO = {
       taggar: ["JavaScript", "HTML", "CSS", "Spel"],
       ikon: "🍰",
       bilete: "bileter/prosjekt/kakeklikker.png",
-      demo: "https://hausnes.github.io/kakeklikkar/",
+      demo: "https://www.hausnes.no/kakeklikkar/",
       kjelde: "https://github.com/hausnes/kakeklikkar",
     },
   ],

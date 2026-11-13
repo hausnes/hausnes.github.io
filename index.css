@@ -229,6 +229,18 @@
     font-size: 0.98rem;
 }
 
+/* Liten notis på eit prosjekt, t.d. at tenesta krev invitasjon */
+.kort-tekst p.merknad, .merknad {
+    margin: -0.4rem 0 1rem;
+    padding: 0.5rem 0.75rem;
+    border-left: 3px solid var(--himmel);
+    border-radius: 0 8px 8px 0;
+    background: color-mix(in srgb, var(--himmel) 8%, transparent);
+    color: var(--blekk);
+    font-size: 0.88rem;
+}
+.merknad a { color: var(--himmel); }
+
 .taggar {
     list-style: none;
     margin: 0;

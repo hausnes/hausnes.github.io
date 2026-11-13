@@ -19,6 +19,7 @@ function visFramheva() {
             <h2 id="framheva-tittel">${p.tittel}</h2>
             <p class="framheva-kort-tekst">${p.kort}</p>
             <p>${p.lang ?? ""}</p>
+            ${merknadHtml(p)}
             <ul class="taggar">${p.taggar.map((t) => `<li>${t}</li>`).join("")}</ul>
             <div class="lenker">${lenkjerHtml(p, true)}</div>
         </div>
@@ -100,6 +101,7 @@ function visProsjekt() {
             <div class="kort-tekst">
                 <h3>${p.tittel}</h3>
                 <p>${p.kort}</p>
+                ${merknadHtml(p)}
                 <ul class="taggar">${p.taggar.map((t) =>
                     `<li class="${valdeTaggar.has(t) ? "valt" : ""}">${t}</li>`).join("")}</ul>
                 <div class="lenker">${lenkjerHtml(p, false)}</div>
@@ -144,6 +146,10 @@ function koplaBileteFallback(boks) {
         if (img.complete && img.naturalWidth === 0) byt();
         else img.addEventListener("error", byt, { once: true });
     });
+}
+
+function merknadHtml(p) {
+    return p.merknad ? `<p class="merknad">🔑 ${p.merknad}</p>` : "";
 }
 
 function lenkjerHtml(p, stor) {
